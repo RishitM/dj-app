@@ -1,0 +1,45 @@
+.heading{
+    font-size: 23px;
+    width:100%;
+    margin-top: 0;
+}
+.note{
+    font-size: 15px;
+    color: black;
+}
+body{
+    background-size: cover;
+}
+.disk{
+    width: 200px;
+    height: 200px;
+}
+.lt-lft{
+    float: left;
+}
+.btn1{
+    margin-top:05px;
+    font-size: 23px;
+}
+.t-lft{
+    float: right;
+}
+canvas{
+    border-style: ridge;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 5px yellow;
+}
+#footer{
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    font-size: 40px;
+}
+.play{
+    font-size: 50px;
+    width: 180px;
+    height: 80px;
+}
