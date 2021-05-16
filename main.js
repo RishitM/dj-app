@@ -1,7 +1,8 @@
-var lft_wristx
-var lft_wristy
-var rgt_wristx
-var rgt_wristy
+var volume_val=0
+var lft_wristx=0
+var lft_wristy=0
+var rgt_wristx=0
+var rgt_wristy=0
 var song=""
 function preload(){
 song=loadSound("music.mp3");
@@ -16,7 +17,15 @@ function setup(){
     posenet.on("pose",gotPoses)
 }
 function draw(){
+   fill(245,0,0)
+   circle(lft_wristx,lft_wristy,5)
     image(video,0,0,700,500)
+    volume_val=Number(lft_wristy);
+    volume_val=floor(volume_val);
+    volume_val=volume_val/500
+    console.log(volume_val)
+    song.setVolume(volume_val)
+    document.getElementById("vlm").innerHTML=volume_val;
 }
 function play_music(){
     song.setVolume(0.5)
@@ -41,6 +50,7 @@ console.log(lft_wristx);
 console.log(lft_wristy);
 console.log(rgt_wristx);
 console.log(rgt_wristy);
+
 
 }
 }
